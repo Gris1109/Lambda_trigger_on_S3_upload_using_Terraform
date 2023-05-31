@@ -18,8 +18,8 @@ resource "aws_lambda_function" "terra_lambda" {
   handler = "src/lambda_function.lambda_handler"
   runtime = var.Lruntime
   timeout = var.Ltimeout
-  filename         = "src/lambda_function.zip"  # Path to your ZIP file
-  source_code_hash = filebase64sha256("src/lambda_function.zip")
+  filename = "../src.zip"  # Path to your ZIP file
+  source_code_hash = filebase64sha256("../src.zip")
 }
 
 # aws_s3_bucket
