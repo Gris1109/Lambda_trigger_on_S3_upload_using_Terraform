@@ -9,3 +9,25 @@ The context parameter provides information about the runtime environment and AWS
     context.function_version: The version of the Lambda function.
     context.invoked_function_arn: The ARN (Amazon Resource Name) of the Lambda function.
     context.get_remaining_time_in_millis(): Returns the number of milliseconds left before the execution times out.
+
+
+
+
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "s3:GetObject",
+        "s3:PutObject"
+      ],
+      "Resource": "arn:aws:s3:::your-bucket-name/*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "ec2:*",
+      "Resource": "*"
+    }
+  ]
+}
