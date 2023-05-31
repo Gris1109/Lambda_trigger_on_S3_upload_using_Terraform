@@ -1,13 +1,13 @@
 # aws_iam_role                       
 resource "aws_iam_role" "lambda_iam" {
   name = var.lambda_role_name
-  assume_role_policy = file("${path.module}/assume_role_policy.sh")
+  assume_role_policy = file("${path.module}/assume_role_policy.json")
 }
 
 # aws_iam_role_policy
 resource "aws_iam_group_policy" "role_policy" {
   name = var.lambda_iam_policy
-  policy = file("${path.module}/policy.sh")
+  policy = file("${path.module}/policy.json")
   role = aws_iam_role.lambda_iam.id
 }
 
