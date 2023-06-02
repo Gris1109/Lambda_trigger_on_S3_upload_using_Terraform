@@ -6,7 +6,8 @@ ec2 = boto3.client('ec2')
 
 # Define the Lambda function handler
 def lambda_handler(event, context):
-    
+
+    """
     # Retrieve the bucket name from the event
     bucket_name = event['Records'][0]['s3']['bucket']['name']
     timestamp = event["Records"][0]["eventTime"]
@@ -22,10 +23,11 @@ def lambda_handler(event, context):
     print("s3_size:", s3_data_size)
     print("event_type:", event_type)
     print("owner_id:", owner_id)
-    
+    """
+
     # Define EC2 instance parameters
     instance_params = {
-        'ImageId': 'ami-xxxxxxxx',  # Specify the desired Amazon Machine Image (AMI) ID
+        'ImageId': 'ami-0261755bbcb8c4a84',  # Specify the desired Amazon Machine Image (AMI) ID
         'InstanceType': 't2.micro',  # Specify the instance type
         'MinCount': 1,
         'MaxCount': 1

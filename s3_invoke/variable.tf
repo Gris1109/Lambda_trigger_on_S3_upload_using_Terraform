@@ -22,9 +22,9 @@ variable "lambda_iam_policy_name" {
 }
 
 variable "bucket_name" {
-  default = "s3_invoke_bucket4199"
+  default = "s3invokebucket784199"
 }
 
-variable "environment" {
-  default = "dev"
+variable "region" {
+  default = "us-east-1"
 }
