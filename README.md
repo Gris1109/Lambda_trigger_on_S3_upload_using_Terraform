@@ -42,6 +42,19 @@ Explain the structure of your project, highlighting important directories and fi
     resources.tf: Defines the Terraform resources required for the project.
     outputs.tf: Specifies the outputs that users can access after provisioning the infrastructure.
     variables.tf (optional): Lists the input variables that can be customized by users.
+    
+- s3_invoke/
+  - main.tf
+  - provider.tf
+  - variables.tf
+  - output.tf
+  - policy.json
+  - assume_policy.json
+- src/
+  - main.py
+- README.md
+- src.zip
+
 
 ## Resources
 
