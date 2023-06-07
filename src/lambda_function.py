@@ -27,7 +27,7 @@ def lambda_handler(event, context):
 
     # Define EC2 instance parameters
     instance_params = {
-        'ImageId': 'ami-0261755bbcb8c4a84',  # Specify the desired Amazon Machine Image (AMI) ID
+        'ImageId': 'ami-0261755***b8c4a84',  # Specify the desired Amazon Machine Image (AMI) ID
         'InstanceType': 't2.micro',  # Specify the instance type
         'MinCount': 1,
         'MaxCount': 1
